@@ -51,8 +51,10 @@ function pbh_load_overlay_scripts() {
 	wp_enqueue_script( 'modernizr', plugin_dir_url( __FILE__ ) . '/includes/js/modernizr.custom.js' );
 	wp_enqueue_script( 'classie', plugin_dir_url( __FILE__ ) . '/includes/js/classie.min.js', '', '', true );
 	wp_enqueue_script( 'global', plugin_dir_url( __FILE__ ) . '/includes/js/global.min.js' , array( 'jquery' ), '1.0.0', true ); 
+	wp_enqueue_style( 'styles', plugin_dir_url( __FILE__ ) . '/includes/css/overlay-style.css' ); 
 	
 }
+
 
 
 //* Add mobile menu icon
@@ -60,8 +62,9 @@ add_action( 'genesis_header', 'dl_nav_toggle', 8 );
 function dl_nav_toggle() {
 	?>
 	
- 	<span class="nav-label" data-target="#navPop">Menu</span>
+ 	
 	<button type="button" id="navbar-toggle" data-target="#navPop" aria-label="Menu" aria-controls="menu-primary-navigation" aria-expanded="false">
+	<span class="nav-label" data-target="#navPop">Menu</span>
 	<span class='sr-text'><?php echo __( 'Toggle Menu', 'genesis-menu-overlay' );?></span>
 	<span class="icon-bar"></span>
 	<span class="icon-bar"></span>

@@ -1,0 +1,202 @@
+/**
+ * Stylesheet for Genesis Mobile Menu Overlay Plugin
+ *
+ * @author    Robin Cornett <hello@robincornett.com>
+ * @license   GPL-2.0+
+ */
+
+
+/* # Navigation overlay
+---------------------------------------------------------------------------------------------------- */
+.genesis-nav-menu {
+	background-color: transparent;
+}
+
+
+.genesis-nav-menu .menu-item {
+	display: block;
+	text-align: center;
+}
+
+.sr-text {
+	clip: rect(1px,1px,1px,1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+
+}
+
+.site-header .wrap {
+    max-width: 100%;
+}
+
+
+
+.overlay-simplegenie {
+	visibility: hidden;
+	-webkit-transform: translateY(60%) scale(0);
+	transform: translateY(60%) scale(0);
+	-webkit-transition: -webkit-transform 0.6s, visibility 0s 0.6s;
+	transition: transform 0.6s, visibility 0s 0.6s;
+}
+
+.overlay-simplegenie.open {
+	visibility: visible;
+	-webkit-transform: translateY(0%) scale(1);
+	transform: translateY(0%) scale(1);
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+}
+
+
+
+#navbar-toggle {
+	display: block;
+	padding: 14px 20px;
+	float:right;
+	z-index: 999;
+	border:none;
+	background-color: transparent;
+}
+
+#navbar-toggle .icon-bar {
+	display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color:#333;
+}
+
+#navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 4px;
+}
+
+
+.nav-label {
+	color: #333;
+    position: relative;
+    right: 50px;
+    top: 18px;
+    cursor: pointer;
+}
+
+
+.nav-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgb(177,201,84);
+	background: rgba(177,201,84,0.95);
+	z-index: 99999;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: hidden; */
+    overflow-y: auto;
+}
+
+
+.nav-overlay .widgettitle {
+	font-size: 26px;
+}
+
+/* Overlay closing cross */
+.nav-overlay .overlay-close {
+	padding: 10px 20px;
+	position: absolute;
+	right: 50px;
+	top: 20px;
+	overflow: hidden;
+	font-size: 30px;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	
+}
+
+/* Menu style */
+.nav-overlay nav {
+	text-align: center;
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.nav-overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 60%;
+	position: relative;
+	width:100%;
+}
+
+.nav-overlay ul li {
+	display: block;
+	height: 16.67%;
+	height: calc(100% / 6);
+	min-height: 54px;
+}
+
+.nav-overlay ul li a {
+	font-size: 54px;
+	font-weight: 600;
+	display: block;
+	color: #fff;
+	-webkit-transition: color 0.2s;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.nav-overlay ul li a:hover,
+.nav-overlay ul li a:focus,
+.nav-overlay-close:focus  {
+	color: #eaeaea;
+	text-decoration: underline;
+}
+
+
+
+
+/* Effects */
+.overlay-slidedown {
+	visibility: hidden;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+	-webkit-transition: -webkit-transform 0.3s ease-in-out, visibility 0s 0.3s;
+	transition: transform 0.3s ease-in-out, visibility 0s 0.3s;
+}
+
+.overlay-slidedown.open {
+	visibility: visible;
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+
+@media only screen and (max-width: 480px) {
+
+	.nav-overlay nav {
+		top: 55%;
+	}
+
+	.nav-overlay ul li {
+		min-height: 50px;
+	}
+
+	.nav-overlay ul li a {
+		font-size: 25px
+	}
+
+
+}

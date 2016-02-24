@@ -12,4 +12,6 @@ The Genesis Mobile Menu Overlay Plugin creates a full screen overlay display you
 
 This plugin allows you to create a full screen overlay for your primary navigation.
 
+You will need to remove any other mobile menu scripts that may be part of your theme.
+
 The plugin is based on the <a href="http://tympanus.net/Development/FullscreenOverlayStyles/">Fullscreen Overlay Styles & Effects</a> code by Codrops.
